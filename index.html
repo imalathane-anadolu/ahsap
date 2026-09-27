@@ -1,3 +1,10 @@
+Süper! Bütün paketleri, detaylarını ve Shopier linklerini aldım.
+
+Tasarımı ve CDN çökse bile bozulmayan dayanıklı altyapıyı koruyarak **"Paketler & Fiyatlar"** bölümünü siteye ekledim. Hem Shopier satın alma butonlarını hem de DM'den soru sorma seçeneklerini yerleştirdim.
+
+İşte tam güncellenmiş ve eksiksiz **`index.html`** kodun:
+
+```html
 <!DOCTYPE html>
 <html lang="tr" class="scroll-smooth">
 <head>
@@ -67,17 +74,145 @@
 
         <!-- Alt Kısım: Yönlendirme Butonları -->
         <div class="pb-6 flex flex-wrap justify-center gap-4">
-            <a href="#urunler" class="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-500 text-white font-semibold px-8 py-4 rounded-full shadow-lg transition duration-300 hover:scale-105">
-                <span>Ürünleri İncele</span>
+            <a href="#paketler" class="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-500 text-white font-semibold px-8 py-4 rounded-full shadow-lg transition duration-300 hover:scale-105">
+                <span>Paketleri İncele</span>
                 <i class="fa-solid fa-arrow-down"></i>
+            </a>
+            <a href="#urunler" class="inline-flex items-center gap-2 bg-stone-800 hover:bg-stone-700 text-stone-200 font-semibold px-8 py-4 rounded-full border border-stone-700 transition duration-300 hover:scale-105">
+                <span>Modülleri İncele</span>
             </a>
         </div>
     </header>
 
-    <!-- ÜRÜNLER KISMI -->
+    <!-- PAKETLER & FİYATLAR BÖLÜMÜ -->
+    <section id="paketler" class="max-w-6xl mx-auto px-4 py-16 border-t border-stone-800">
+        <div class="text-center mb-12">
+            <span class="text-amber-500 font-semibold tracking-wider text-sm uppercase">Shopier Güvencesiyle</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-100 mt-1">Hazır Set Paketlerimiz</h2>
+            <p class="text-stone-400 mt-2 max-w-xl mx-auto">İhtiyacınıza uygun kombinasyonu seçin, Kargo Bizden avantajıyla Shopier üzerinden güvenle sipariş verin.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+            <!-- PAKET 1: Standart Paket -->
+            <div class="card p-6 flex flex-col justify-between hover:border-amber-500/50 transition">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold text-stone-100">Standart Paket</h3>
+                        <span class="bg-emerald-500/10 text-emerald-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-emerald-500/20">Kargo Bizden</span>
+                    </div>
+                    <div class="text-3xl font-extrabold text-amber-500 mb-6">4.650 TL</div>
+                    <ul class="space-y-3 text-stone-300 text-sm mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> 4 Adet Tırmanma Çubuğu</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> Temel Kurulum Ekipmanları</li>
+                    </ul>
+                </div>
+                <div class="pt-4 border-t border-stone-800 flex gap-2">
+                    <a href="https://www.shopier.com/51266784" target="_blank" class="flex-1 bg-amber-600 hover:bg-amber-500 text-white font-bold py-3 px-4 rounded-xl text-center text-sm transition">
+                        Satın Al (Shopier)
+                    </a>
+                </div>
+            </div>
+
+            <!-- PAKET 2: Orta Paket - 1 -->
+            <div class="card p-6 flex flex-col justify-between border-amber-500/60 relative hover:border-amber-500 transition">
+                <div class="absolute -top-3 right-6 bg-amber-500 text-stone-950 font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider">
+                    Popüler
+                </div>
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold text-stone-100">Orta Paket - 1</h3>
+                        <span class="bg-emerald-500/10 text-emerald-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-emerald-500/20">Kargo Bizden</span>
+                    </div>
+                    <div class="text-3xl font-extrabold text-amber-500 mb-6">5.350 TL</div>
+                    <ul class="space-y-3 text-stone-300 text-sm mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> 4 Adet Tırmanma Çubuğu</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> Salıncak Modülü</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> Tutunma Halkası Modülü</li>
+                    </ul>
+                </div>
+                <div class="pt-4 border-t border-stone-800 flex gap-2">
+                    <a href="https://www.shopier.com/anadolu_imalathane/51269071" target="_blank" class="flex-1 bg-amber-600 hover:bg-amber-500 text-white font-bold py-3 px-4 rounded-xl text-center text-sm transition">
+                        Satın Al (Shopier)
+                    </a>
+                </div>
+            </div>
+
+            <!-- PAKET 3: Orta Paket - 2 -->
+            <div class="card p-6 flex flex-col justify-between hover:border-amber-500/50 transition">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold text-stone-100">Orta Paket - 2</h3>
+                        <span class="bg-emerald-500/10 text-emerald-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-emerald-500/20">Kargo Bizden</span>
+                    </div>
+                    <div class="text-3xl font-extrabold text-amber-500 mb-6">5.350 TL</div>
+                    <ul class="space-y-3 text-stone-300 text-sm mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> 4 Adet Tırmanma Çubuğu</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> Mega Raket Seti</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> Ahşap Top</li>
+                    </ul>
+                </div>
+                <div class="pt-4 border-t border-stone-800 flex gap-2">
+                    <a href="https://www.shopier.com/anadolu_imalathane/51269388" target="_blank" class="flex-1 bg-amber-600 hover:bg-amber-500 text-white font-bold py-3 px-4 rounded-xl text-center text-sm transition">
+                        Satın Al (Shopier)
+                    </a>
+                </div>
+            </div>
+
+            <!-- PAKET 4: Üst Paket -->
+            <div class="card p-6 flex flex-col justify-between hover:border-amber-500/50 transition">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold text-stone-100">Üst Paket</h3>
+                        <span class="bg-emerald-500/10 text-emerald-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-emerald-500/20">Kargo Bizden</span>
+                    </div>
+                    <div class="text-3xl font-extrabold text-amber-500 mb-6">6.850 TL</div>
+                    <ul class="space-y-3 text-stone-300 text-sm mb-6">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> 4 Adet Tırmanma Çubuğu</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> Salıncak Modülü</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> Pinokyo Kukla Seti</li>
+                    </ul>
+                </div>
+                <div class="pt-4 border-t border-stone-800 flex gap-2">
+                    <a href="https://www.shopier.com/anadolu_imalathane/51270092" target="_blank" class="flex-1 bg-amber-600 hover:bg-amber-500 text-white font-bold py-3 px-4 rounded-xl text-center text-sm transition">
+                        Satın Al (Shopier)
+                    </a>
+                </div>
+            </div>
+
+            <!-- PAKET 5: Mega Paket - 1 -->
+            <div class="card p-6 flex flex-col justify-between border-amber-500/80 md:col-span-2 lg:col-span-2 hover:border-amber-500 transition bg-gradient-to-br from-stone-900 to-stone-850">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <span class="text-xs font-bold text-amber-500 uppercase tracking-wider">En Dolu İçerik</span>
+                            <h3 class="text-3xl font-bold text-stone-100 mt-1">Mega Paket - 1</h3>
+                        </div>
+                        <span class="bg-emerald-500/10 text-emerald-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-emerald-500/20">Kargo Bizden</span>
+                    </div>
+                    <div class="text-4xl font-extrabold text-amber-500 mb-6">7.990 TL</div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-stone-300 text-sm mb-6">
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> 4 Adet Tırmanma Çubuğu</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> Mega Raket Seti + Ahşap Top</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> Salıncak Modülü</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> Tutunma Halkası Modülü</div>
+                        <div class="flex items-center gap-2 sm:col-span-2"><i class="fa-solid fa-check text-amber-500"></i> Pinokyo Kukla Seti</div>
+                    </div>
+                </div>
+                <div class="pt-4 border-t border-stone-800 flex gap-2">
+                    <a href="https://www.shopier.com/anadolu_imalathane/51270473" target="_blank" class="flex-1 bg-amber-600 hover:bg-amber-500 text-white font-bold py-3.5 px-4 rounded-xl text-center text-sm transition shadow-lg">
+                        Satın Al (Shopier)
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ÜRÜNLER & MODÜLLER KISMI -->
     <section id="urunler" class="max-w-6xl mx-auto px-4 py-16 border-t border-stone-800">
         <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-stone-100">Özel Tasarım Ürünlerimiz</h2>
+            <h2 class="text-3xl font-bold text-stone-100">Özel Tasarım Ürünlerimiz & Modüller</h2>
             <p class="text-stone-400 mt-2">Büyütmek için resimlerin üzerine tıklayabilirsiniz.</p>
         </div>
 
@@ -110,7 +245,7 @@
                         <span class="text-xs text-stone-400">Durum</span>
                         <p class="text-lg font-bold text-amber-500">Paket İçi Modül</p>
                     </div>
-                    <a href="https://instagram.com/imalathane_anadolu" target="_blank" class="bg-amber-600 hover:bg-amber-500 text-white font-semibold px-5 py-2.5 rounded-xl text-sm transition">
+                    <a href="https://instagram.com/imalathane_anadolu" target="_blank" class="bg-stone-800 hover:bg-stone-700 text-stone-200 font-semibold px-4 py-2 rounded-xl text-xs transition border border-stone-700">
                         Bilgi Al (DM)
                     </a>
                 </div>
@@ -143,7 +278,7 @@
                         <span class="text-xs text-stone-400">Durum</span>
                         <p class="text-lg font-bold text-amber-500">Paket İçi Modül</p>
                     </div>
-                    <a href="https://instagram.com/imalathane_anadolu" target="_blank" class="bg-amber-600 hover:bg-amber-500 text-white font-semibold px-5 py-2.5 rounded-xl text-sm transition">
+                    <a href="https://instagram.com/imalathane_anadolu" target="_blank" class="bg-stone-800 hover:bg-stone-700 text-stone-200 font-semibold px-4 py-2 rounded-xl text-xs transition border border-stone-700">
                         Bilgi Al (DM)
                     </a>
                 </div>
@@ -178,7 +313,7 @@
                         <span class="text-xs text-stone-400">Durum</span>
                         <p class="text-lg font-bold text-amber-500">Paket İçi Modül</p>
                     </div>
-                    <a href="https://instagram.com/imalathane_anadolu" target="_blank" class="bg-amber-600 hover:bg-amber-500 text-white font-semibold px-5 py-2.5 rounded-xl text-sm transition">
+                    <a href="https://instagram.com/imalathane_anadolu" target="_blank" class="bg-stone-800 hover:bg-stone-700 text-stone-200 font-semibold px-4 py-2 rounded-xl text-xs transition border border-stone-700">
                         Bilgi Al (DM)
                     </a>
                 </div>
@@ -213,7 +348,7 @@
                         <span class="text-xs text-stone-400">Durum</span>
                         <p class="text-lg font-bold text-amber-500">Paket İçi Modül</p>
                     </div>
-                    <a href="https://instagram.com/imalathane_anadolu" target="_blank" class="bg-amber-600 hover:bg-amber-500 text-white font-semibold px-5 py-2.5 rounded-xl text-sm transition">
+                    <a href="https://instagram.com/imalathane_anadolu" target="_blank" class="bg-stone-800 hover:bg-stone-700 text-stone-200 font-semibold px-4 py-2 rounded-xl text-xs transition border border-stone-700">
                         Bilgi Al (DM)
                     </a>
                 </div>
@@ -246,7 +381,7 @@
                         <span class="text-xs text-stone-400">Özel Sipariş</span>
                         <p class="text-lg font-bold text-amber-500">İletişime Geçin</p>
                     </div>
-                    <a href="https://instagram.com/imalathane_anadolu" target="_blank" class="bg-amber-600 hover:bg-amber-500 text-white font-semibold px-5 py-2.5 rounded-xl text-sm transition">
+                    <a href="https://instagram.com/imalathane_anadolu" target="_blank" class="bg-amber-600 hover:bg-amber-500 text-white font-semibold px-4 py-2 rounded-xl text-xs transition">
                         Sipariş Ver (DM)
                     </a>
                 </div>
@@ -279,7 +414,7 @@
                         <span class="text-xs text-stone-400">Özel Sipariş</span>
                         <p class="text-lg font-bold text-amber-500">İletişime Geçin</p>
                     </div>
-                    <a href="https://instagram.com/imalathane_anadolu" target="_blank" class="bg-amber-600 hover:bg-amber-500 text-white font-semibold px-5 py-2.5 rounded-xl text-sm transition">
+                    <a href="https://instagram.com/imalathane_anadolu" target="_blank" class="bg-amber-600 hover:bg-amber-500 text-white font-semibold px-4 py-2 rounded-xl text-xs transition">
                         Sipariş Ver (DM)
                     </a>
                 </div>
@@ -308,7 +443,7 @@
     <script>
         function openModal(imageSrc) {
             const modal = document.getElementById('imageModal');
-            const modalImg = document.getElementById('modalImage');
+            modalImg = document.getElementById('modalImage');
             modalImg.src = imageSrc;
             modal.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
@@ -328,3 +463,5 @@
     </script>
 </body>
 </html>
+
+```
