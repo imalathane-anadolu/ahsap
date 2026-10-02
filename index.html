@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="tr" class="scroll-smooth">
 <head>
@@ -17,7 +16,7 @@
         .img-container { height: 320px; width: 100%; display: flex; align-items: center; justify-content: center; background-color: #0c0a09; overflow: hidden; position: relative; }
         .img-container img { max-height: 100%; max-width: 100%; object-fit: contain; }
         .grid-custom { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .card { background-color: #292524; border: 1px solid #44403c; border-radius: 1.5rem; overflow: hidden; }
+        .card { background-color: #292524; border: 1px solid #44403c; border-radius: 1.5rem; overflow: hidden; transition: all 0.3s ease; }
     </style>
 </head>
 <body class="bg-stone-900 text-stone-100 font-sans antialiased selection:bg-amber-500 selection:text-white">
@@ -27,7 +26,7 @@
         
         <!-- Üst Kısım: Marka Amblemi & Instagram Sayfası -->
         <div class="pt-6 flex flex-col sm:flex-row items-center gap-4">
-            <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-amber-500/80 shadow-lg bg-stone-950 p-1 flex items-center justify-center flex-shrink-0 cursor-pointer" onclick="openModal('Logo.jpeg')">
+            <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-amber-500/80 shadow-lg bg-stone-950 p-1 flex items-center justify-center flex-shrink-0 cursor-pointer hover:scale-105 transition" onclick="openModal('Logo.jpeg')">
                 <img src="Logo.jpeg" alt="İmalathane Anadolu Logo" class="w-full h-full object-cover rounded-full">
             </div>
 
@@ -89,7 +88,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
 
             <!-- PAKET 1: Standart Paket -->
-            <div class="card p-6 flex flex-col justify-between hover:border-amber-500/50 transition">
+            <div class="card p-6 flex flex-col justify-between hover:border-amber-500/50">
                 <div>
                     <div class="flex justify-between items-start mb-4">
                         <h3 class="text-2xl font-bold text-stone-100">Standart Paket</h3>
@@ -109,7 +108,7 @@
             </div>
 
             <!-- PAKET 2: Orta Paket - 1 -->
-            <div class="card p-6 flex flex-col justify-between border-amber-500/60 relative hover:border-amber-500 transition">
+            <div class="card p-6 flex flex-col justify-between border-amber-500/60 relative hover:border-amber-500">
                 <div class="absolute -top-3 right-6 bg-amber-500 text-stone-950 font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider">
                     Popüler
                 </div>
@@ -133,7 +132,7 @@
             </div>
 
             <!-- PAKET 3: Orta Paket - 2 -->
-            <div class="card p-6 flex flex-col justify-between hover:border-amber-500/50 transition">
+            <div class="card p-6 flex flex-col justify-between hover:border-amber-500/50">
                 <div>
                     <div class="flex justify-between items-start mb-4">
                         <h3 class="text-2xl font-bold text-stone-100">Orta Paket - 2</h3>
@@ -154,7 +153,7 @@
             </div>
 
             <!-- PAKET 4: Üst Paket -->
-            <div class="card p-6 flex flex-col justify-between hover:border-amber-500/50 transition">
+            <div class="card p-6 flex flex-col justify-between hover:border-amber-500/50">
                 <div>
                     <div class="flex justify-between items-start mb-4">
                         <h3 class="text-2xl font-bold text-stone-100">Üst Paket</h3>
@@ -175,7 +174,7 @@
             </div>
 
             <!-- PAKET 5: Mega Paket - 1 -->
-            <div class="card p-6 flex flex-col justify-between border-amber-500/80 md:col-span-2 lg:col-span-2 hover:border-amber-500 transition bg-gradient-to-br from-stone-900 to-stone-850">
+            <div class="card p-6 flex flex-col justify-between border-amber-500/80 md:col-span-2 lg:col-span-2 hover:border-amber-500 bg-gradient-to-br from-stone-900 to-stone-850">
                 <div>
                     <div class="flex justify-between items-start mb-4">
                         <div>
@@ -213,7 +212,7 @@
         <div class="grid-custom max-w-5xl mx-auto">
 
             <!-- ÜRÜN 1: Mega Raket Seti -->
-            <div class="card flex flex-col justify-between hover:border-amber-500/50 transition">
+            <div class="card flex flex-col justify-between hover:border-amber-500/50">
                 <div>
                     <div class="img-container cursor-pointer group" onclick="openModal('megaraket.jpeg')">
                         <img src="megaraket.jpeg" alt="Mega Raket Seti" class="transition duration-300 group-hover:scale-105">
@@ -246,7 +245,7 @@
             </div>
 
             <!-- ÜRÜN 2: Pinokyo Kukla Seti -->
-            <div class="card flex flex-col justify-between hover:border-amber-500/50 transition">
+            <div class="card flex flex-col justify-between hover:border-amber-500/50">
                 <div>
                     <div class="img-container cursor-pointer group" onclick="openModal('pinokyo.jpeg')">
                         <img src="pinokyo.jpeg" alt="Pinokyo Kukla Seti" class="transition duration-300 group-hover:scale-105">
@@ -279,7 +278,7 @@
             </div>
 
             <!-- ÜRÜN 3: Salıncak Modülü -->
-            <div class="card flex flex-col justify-between hover:border-amber-500/50 transition">
+            <div class="card flex flex-col justify-between hover:border-amber-500/50">
                 <div>
                     <div class="h-80 bg-stone-950 p-2 grid grid-cols-2 gap-2">
                         <div class="h-full cursor-pointer relative group rounded-xl overflow-hidden" onclick="openModal('salincak-1.jpeg')">
@@ -314,7 +313,7 @@
             </div>
 
             <!-- ÜRÜN 4: Tutunma Halkası Modülü -->
-            <div class="card flex flex-col justify-between hover:border-amber-500/50 transition">
+            <div class="card flex flex-col justify-between hover:border-amber-500/50">
                 <div>
                     <div class="h-80 bg-stone-950 p-2 grid grid-cols-2 gap-2">
                         <div class="h-full cursor-pointer relative group rounded-xl overflow-hidden" onclick="openModal('tutunmahalka-1.jpeg')">
@@ -349,7 +348,7 @@
             </div>
 
             <!-- ÜRÜN 5: Duvar Tipi Tırmanma Barı -->
-            <div class="card flex flex-col justify-between hover:border-amber-500/50 transition">
+            <div class="card flex flex-col justify-between hover:border-amber-500/50">
                 <div>
                     <div class="img-container cursor-pointer group" onclick="openModal('duvartipi.jpeg')">
                         <img src="duvartipi.jpeg" alt="Duvar Tipi Tırmanma Barı" class="transition duration-300 group-hover:scale-105">
@@ -382,7 +381,7 @@
             </div>
 
             <!-- ÜRÜN 6: Barfiks Tipi Tırmanma İstasyonu -->
-            <div class="card flex flex-col justify-between hover:border-amber-500/50 transition">
+            <div class="card flex flex-col justify-between hover:border-amber-500/50">
                 <div>
                     <div class="img-container cursor-pointer group" onclick="openModal('barfikstipi.jpeg')">
                         <img src="barfikstipi.jpeg" alt="Barfiks Tipi Tırmanma İstasyonu" class="transition duration-300 group-hover:scale-105">
@@ -418,7 +417,7 @@
     </section>
 
     <!-- RESİM BÜYÜTME MODALI (LIGHTBOX) -->
-    <div id="imageModal" class="fixed inset-0 z-50 bg-black/90 hidden backdrop-blur-sm flex items-center justify-center p-4" onclick="closeModal()">
+    <div id="imageModal" class="fixed inset-0 z-50 bg-black/90 hidden backdrop-blur-sm flex items-center justify-center p-4 transition-opacity" onclick="closeModal()">
         <div class="relative max-w-4xl max-h-[90vh] w-full flex flex-col items-center justify-center" onclick="event.stopPropagation()">
             <button onclick="closeModal()" class="absolute -top-12 right-0 text-stone-300 hover:text-white text-3xl font-bold focus:outline-none">
                 ✕
@@ -437,7 +436,7 @@
     <script>
         function openModal(imageSrc) {
             const modal = document.getElementById('imageModal');
-            modalImg = document.getElementById('modalImage');
+            const modalImg = document.getElementById('modalImage'); // 'const' eklendi
             modalImg.src = imageSrc;
             modal.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
@@ -457,5 +456,3 @@
     </script>
 </body>
 </html>
-
-```
